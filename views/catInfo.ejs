@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+<div class="container section brown lighten-4">
+    <div class="row">
+        <div class="col m6 offset-m3">
+            <h1 class="center">Cat <%- cat.name -%> </h1>
+            <div class="center">
+                <img src="<%- cat.image -%>">
+            </div>
+            <h5 class="center">Age: <%- cat.age -%></h5>
+            <h5 class="center">Sleeping spots</h5>
+            <ul class="center">
+            <% for (let x in cat.spots) { %>
+                <li> <%- cat.spots[x] -%> </li>
+            <% } %>
+            </ul>
+        </div>
+    </div>
+</div>     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
